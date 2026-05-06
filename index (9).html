@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dial & Deliver – Das Cold Calling Playbook</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #111111;
+    --dark-grey: #555555;
+    --silver: #c0c0c0;
+    --cream: #fffff0;
+    --gold: #c9a84c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--cream); color: var(--black); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+  /* NAV */
+  nav { background: var(--cream); padding: 20px 40px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--silver); }
+  .logo-img { height: 44px; width: auto; }
+
+  /* HERO */
+  .hero { background: var(--cream); padding: 80px 40px 80px; }
+  .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero-tag { display: inline-block; background: var(--gold); color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; margin-bottom: 28px; }
+  .hero h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--black); margin-bottom: 24px; letter-spacing: -1px; }
+  .hero h1 em { color: var(--gold); font-style: normal; }
+  .hero-sub { font-size: 18px; font-weight: 800; color: var(--black); line-height: 1.7; }
+  .hero-sub em { color: var(--gold); font-style: normal; font-weight: 800; }
+  .hero-right { display: flex; flex-direction: column; align-items: stretch; }
+  .hero-right { display: flex; flex-direction: column; align-items: stretch; }
+  .hero-photo { width: 100%; height: 520px; object-fit: cover; object-position: center top; border-radius: 8px; border: 1px solid var(--silver); }
+
+  /* WHAT'S INSIDE */
+  .inside-wrap { background: var(--cream); padding: 100px 40px; }
+  .inside { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+  .inside h2 { font-size: 40px; font-weight: 800; color: var(--black); margin-bottom: 14px; letter-spacing: -0.5px; line-height: 1.15; }
+  .inside-sub { font-size: 17px; font-weight: 300; color: var(--dark-grey); margin-bottom: 60px; max-width: 580px; line-height: 1.7; }
+  .bullets { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .bullet { display: flex; gap: 16px; align-items: flex-start; padding: 24px; background: rgba(0,0,0,0.04); border-radius: 10px; border: 1px solid rgba(0,0,0,0.1); transition: border-color 0.2s, transform 0.2s; }
+  .bullet:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .bullet-check { width: 32px; height: 32px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--black); font-size: 14px; font-weight: 700; }
+  .bullet strong { display: block; font-size: 15px; font-weight: 600; color: var(--black); margin-bottom: 5px; line-height: 1.3; }
+  .bullet span { font-size: 14px; font-weight: 300; color: var(--dark-grey); line-height: 1.6; }
+
+  /* ABOUT */
+  .about { background: var(--black); padding: 100px 40px; }
+  .about-inner { max-width: 1100px; margin: 0 auto; }
+  .about-photo-wrap { display: flex; justify-content: center; }
+  .about-photo { width: 100%; border-radius: 8px; border: 1px solid var(--silver); display: block; }
+  .about h2 { font-size: 36px; font-weight: 800; color: var(--cream); margin-bottom: 28px; letter-spacing: -0.5px; line-height: 1.2; }
+  .about h2 em { color: var(--gold); font-style: normal; }
+  .about p { font-size: 16px; font-weight: 300; color: var(--silver); line-height: 1.8; margin-bottom: 20px; }
+  .stats { display: flex; gap: 60px; flex-wrap: wrap; margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(192,192,192,0.2); justify-content: center; }
+  .stat-num { font-size: 36px; font-weight: 800; color: var(--gold); display: block; letter-spacing: -1px; }
+  .stat-label { font-size: 13px; font-weight: 300; color: var(--silver); }
+
+  /* FINAL CTA */
+  .final-cta { background: var(--black); padding: 100px 40px; text-align: center; }
+  .final-cta h2 { font-size: 44px; font-weight: 800; color: var(--cream); margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+  .final-cta h2 em { color: var(--gold); font-style: normal; }
+  .final-cta > p { font-size: 17px; font-weight: 300; color: var(--silver); margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .cta-form-wrap { max-width: 520px; margin: 0 auto; padding: 36px; text-align: center; }
+  .cta-input { width: 100%; padding: 16px 20px; background: rgba(255,255,255,0.06); border: 1px solid rgba(192,192,192,0.2); border-radius: 8px; color: var(--cream); font-size: 15px; font-family: "DM Sans", sans-serif; margin-bottom: 12px; outline: none; transition: border-color 0.2s; display: block; }
+  .cta-input::placeholder { color: rgba(192,192,192,0.4); }
+  .cta-input:focus { border-color: var(--gold); }
+  .cta-checkbox-label { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 20px; cursor: pointer; }
+  .cta-checkbox { margin-top: 3px; flex-shrink: 0; width: 18px; height: 18px; accent-color: var(--gold); }
+  .cta-checkbox-label span { font-size: 13px; font-weight: 300; color: rgba(192,192,192,0.8); line-height: 1.5; }
+  .cta-button { width: 100%; padding: 18px; background: var(--gold); color: var(--black); font-family: "DM Sans", sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; transition: opacity 0.2s, transform 0.1s; margin-bottom: 20px; }
+  .cta-button:hover { opacity: 0.9; transform: translateY(-1px); }
+  .cta-brevo { display: flex; gap: 12px; align-items: flex-start; }
+  .cta-eu { font-size: 22px; flex-shrink: 0; }
+  .cta-brevo p { font-size: 12px; font-weight: 300; color: rgba(192,192,192,0.45); line-height: 1.6; }
+  .cta-brevo a { color: var(--gold); text-decoration: none; }
+
+  /* FOOTER */
+  footer { background: var(--black); padding: 32px 40px; text-align: center; border-top: 1px solid rgba(192,192,192,0.08); }
+  footer p { font-size: 13px; font-weight: 300; color: rgba(192,192,192,0.45); line-height: 1.8; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero h1 { font-size: 36px; }
+    .hero-photo { height: 360px; }
+    .bullets { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .stats { gap: 28px; flex-wrap: wrap; }
+  }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-tag { animation: fadeUp 0.5s 0.1s both; }
+  .hero h1 { animation: fadeUp 0.5s 0.2s both; }
+  .hero-sub { animation: fadeUp 0.5s 0.3s both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <img src="logo.png" alt="Dial &amp; Deliver" class="logo-img">
+  
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <span class="hero-tag">Das Dial &amp; Deliver Playbook</span>
+      <h1>Dein Struggle mit Cold Calls <em>endet hier.</em></h1>
+      <p class="hero-sub">
+        Schnapp dir mein Cold Calling Playbook, mit dem ich selbst <em>bis zu 5 Termine am Tag</em> buche.
+      </p>
+    </div>
+    <div class="hero-right">
+      <img src="foto-mikro.png" alt="Danny Wörns" class="hero-photo">
+      
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Bereit, mehr Termine<br>zu <em>buchen?</em></h2>
+  <p>Hol dir jetzt das Dial &amp; Deliver Playbook und leg noch heute mehr Termine.</p>
+  <div class="cta-form-wrap">
+    <!-- BREVO FORMULAR HIER -->
+    <a href="https://7bb52ac8.sibforms.com/serve/MUIFANO96GVbgddmp8PbnQxXDEdl_simmQ_Kq24hy7FQ2pjT0jHMvz6QqtdGgJehMdUWiMjQM8VT8ddVgCmhu_V4Ii24_j7oGgx7F2PkT25IsdpOYRgZJ35IBrRmIXqiBV2DEcqubrGndI09KMdmXe6YMbsqm0mhvQvUnS1Quyiyo8P-vlqT29pu3ctamKv20yPbqjvqcKlIb642FQ==" class="cta-button" style="display:block;text-align:center;text-decoration:none;">☎️ Playbook jetzt sichern</a>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<div class="inside-wrap">
+  <div class="inside">
+    <span class="section-label">Das Playbook</span>
+    <h2>Was steckt drin?</h2>
+    <p class="inside-sub">Das komplette Cold Calling Framework – von der Vorbereitung bis zum Abschluss. Alles was du brauchst, um täglich Termine zu buchen.</p>
+    <div class="bullets">
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Golden Rules</strong><span>Mindset, Kalenderstruktur &amp; die richtigen Trigger – deine Vorbereitung, um Türen zu öffnen.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Gatekeeper überwinden</strong><span>Die Techniken, die wirklich funktionieren – direkt zum Entscheider.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Opener</strong><span>Die ersten 10 Sekunden entscheiden alles.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Vorwände</strong><span>„Keine Zeit", „Kein Interesse", „Schicken Sie mir eine Mail" – für jeden Vorwand eine schlagfertige Antwort.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Pitch</strong><span>Klar, prägnant und überzeugend – so präsentierst du dein Angebot auf den Punkt.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Einwände</strong><span>Egal welcher Einwand kommt, mit dieser Technik kannst du alle behandeln.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>Closing</strong><span>Den Termin sicher buchen – und dann die „letzte Frage" stellen.</span></div>
+      </div>
+      <div class="bullet">
+        <div class="bullet-check">✓</div>
+        <div><strong>No-Show Management</strong><span>Jemand taucht nicht zum Termin auf? So gehst du jetzt vor.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+<div>
+      <span class="section-label">Über Danny</span>
+      <h2>Cold Calling ist kein Talent.<br><em>Es ist ein System.</em></h2>
+      <p>Ich bin Danny Wörns, Gründer von Dial &amp; Deliver.</p>
+      <p>In meiner Karriere habe ich über 100.000 Cold Calls gemacht und eine Sache gelernt:</p>
+      <p>Wer ein System hat, gewinnt. Wer keins hat, verliert.</p>
+      <p>Als Freelance-BDR telefoniere ich für meine Kunden und lege bis zu 5 Termine am Tag.</p>
+      <p>In meiner Funktion als Cold-Calling Trainer zeige ich meinen Kunden genau das Vorgehen, mit dem ich selbst die Termine lege.</p>
+      <p>Und weil keiner die Katze im Sack kaufen will, telefoniere ich 60 Minuten live vor dem Team – weil nichts überzeugender ist, als es einfach vorzumachen.</p>
+      <div class="stats">
+        <div><span class="stat-num">100K+</span><span class="stat-label">Cold Calls gemacht</span></div>
+        <div><span class="stat-num">5+</span><span class="stat-label">Termine am Tag</span></div>
+        <div><span class="stat-num">15.6K</span><span class="stat-label">LinkedIn Follower</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- REPEAT CTA -->
+<section class="final-cta">
+  <!-- BREVO FORMULAR HIER -->
+    <a href="https://7bb52ac8.sibforms.com/serve/MUIFANO96GVbgddmp8PbnQxXDEdl_simmQ_Kq24hy7FQ2pjT0jHMvz6QqtdGgJehMdUWiMjQM8VT8ddVgCmhu_V4Ii24_j7oGgx7F2PkT25IsdpOYRgZJ35IBrRmIXqiBV2DEcqubrGndI09KMdmXe6YMbsqm0mhvQvUnS1Quyiyo8P-vlqT29pu3ctamKv20yPbqjvqcKlIb642FQ==" class="cta-button" style="display:block;text-align:center;text-decoration:none;">☎️ Playbook jetzt sichern</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Dial &amp; Deliver · <a href="impressum.html">Impressum</a></p>
+</footer>
+
+</body>
+</html>
