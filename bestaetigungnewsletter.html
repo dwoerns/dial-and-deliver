@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fast geschafft – Dial & Deliver</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #111111;
+  --dark-grey: #555555;
+  --silver: #c0c0c0;
+  --cream: #fffff0;
+  --gold: #c9a84c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--black);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  background: var(--cream);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--silver);
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--black);
+}
+
+.logo-text span { color: var(--gold); }
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.card {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  animation: fadeUp 0.6s 0.1s both;
+}
+
+/* HEADING */
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--black);
+  margin-bottom: 20px;
+  animation: fadeUp 0.5s 0.3s both;
+  display: inline-block;
+  border: 3px solid var(--gold);
+  padding: 10px 28px;
+  border-radius: 6px;
+}
+
+h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+/* BODY TEXT */
+.subtext {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--dark-grey);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  animation: fadeUp 0.5s 0.35s both;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.5s 0.4s both;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(0,0,0,0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black);
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.step-text strong {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+/* HINT */
+.hint {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  line-height: 1.6;
+  padding: 14px 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  animation: fadeUp 0.5s 0.45s both;
+}
+
+.hint strong { color: var(--black); font-weight: 600; }
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  padding: 24px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(192,192,192,0.08);
+}
+
+footer p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(192,192,192,0.45);
+}
+
+footer a { color: rgba(192,192,192,0.45); text-decoration: none; }
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav { padding: 16px 24px; }
+  main { padding: 40px 24px; }
+  h1 { font-size: 30px; }
+  .subtext { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="logo-text">Dial <span>&</span> Deliver</span>
+</nav>
+
+<!-- MAIN -->
+<main>
+  <div class="card">
+
+    <h1>Fast geschafft.</h1>
+
+    <p class="subtext">
+      Ein kleines Willkommensgeschenk wartet schon auf dich.<br>Du musst nur noch kurz deine E-Mail-Adresse bestätigen.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Postfach öffnen</strong>
+          Schau in dein Postfach – die E-Mail ist bereits unterwegs.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Link klicken</strong>
+          Klicke auf den Bestätigungslink in der E-Mail.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Kleine Überraschung entdecken</strong>
+          Und den ersten Cold Call noch heute machen.
+        </div>
+      </div>
+    </div>
+
+    <div class="hint">
+      <strong>Keine E-Mail erhalten?</strong> Schau kurz in deinen Spam-Ordner. Falls sie dort liegt, markiere sie als "Kein Spam" – dann landet die Mail direkt im Postfach.
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Dial & Deliver · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+</footer>
+
+</body>
+</html>
